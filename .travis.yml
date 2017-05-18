@@ -15,3 +15,6 @@ install:
 script: coverage run --source=. --omit=tests -m unittest discover -s tests
 
 after_success: coveralls
+
+before_deploy:
+ - touch ./dale.sh
